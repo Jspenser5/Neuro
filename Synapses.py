@@ -23,6 +23,9 @@ class Synapse:
     def promotion(self):
         self.weight += len(self.synaptic_resource[self.timer.time - self.synaptic_resource < 0.05]) * 0.1
 
+    def clear(self):
+        self.synaptic_resource = np.array([])
+
 
 def create_synapses_with_layers(popul_1, popul_2, mode = "full"):
     if mode == "full":
