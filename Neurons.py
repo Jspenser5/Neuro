@@ -54,3 +54,8 @@ class LIFNeuron:
     def promotion_signal(self):
         for synapse in self.synapses:
             synapse.promotion()
+
+    def clear(self):
+        self.spike_records = []
+        for synapse in self.synapses:
+            synapse.clear()
